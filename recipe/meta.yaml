@@ -16,14 +16,14 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<3.12
+    - python >=3.8,<3.13
     - setuptools >=61
     - wheel
     - toml
     - python-build
     - pip
   run:
-    - python >=3.8,<3.12
+    - python >=3.8,<3.13
     - numba >=0.55.0
     - numpy >=1.21.0
     - pandas >=1.5.3
