@@ -1,13 +1,14 @@
 {% set name = "tsml" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.0" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tsml-{{ version }}.tar.gz
-  sha256: 9dd39cc5b4578de98a434540ee2dc5074bd3e18629f3f8019e053b9e3907fb77
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tsml-{{ version }}.tar.gz
+  sha256: b2425f7efabfabeb7b282912c0b20ca0e5d037116500693576ef0b0ef409ff37
 
 build:
   noarch: python
@@ -16,18 +17,18 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<3.13
+    - python {{ python_min }}
     - setuptools >=61
     - wheel
     - toml
     - python-build
     - pip
   run:
-    - python >=3.8,<3.13
-    - numba >=0.55.0
-    - numpy >=1.21.0
-    - pandas >=1.5.3
-    - scikit-learn >=1.0.0
+    - python >={{ python_min }}
+    - numba >=0.55.0,<0.61.0
+    - numpy >=1.21.0,<2.2.0
+    - pandas >=1.5.3,<2.3.0
+    - scikit-learn >=1.0.0,<1.4.0
     - packaging >=20.0
 
 test:
@@ -36,12 +37,13 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
   home: https://github.com/time-series-machine-learning/tsml/
   dev_url: https://github.com/time-series-machine-learning/
-  summary: A toolkit for time series machine learning algorithms.
+  summary: A development sandbox for time series machine learning algorithms.
   license: BSD-3-Clause
   license_file: LICENSE
 
