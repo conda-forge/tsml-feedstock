@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tsml-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tsml-{{ version }}.tar.gz
   sha256: b2425f7efabfabeb7b282912c0b20ca0e5d037116500693576ef0b0ef409ff37
 
 build:
