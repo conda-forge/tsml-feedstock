@@ -7,7 +7,7 @@ Home: https://github.com/time-series-machine-learning/tsml/
 
 Package license: BSD-3-Clause
 
-Summary: A toolkit for time series machine learning algorithms.
+Summary: A development sandbox for time series machine learning algorithms.
 
 Development: https://github.com/time-series-machine-learning/
 
