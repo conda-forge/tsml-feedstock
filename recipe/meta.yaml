@@ -1,5 +1,5 @@
 {% set name = "tsml" %}
-{% set version = "0.6.1" %}
+{% set version = "0.7.1" %}
 {% set python_min = "3.9" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tsml-{{ version }}.tar.gz
-  sha256: 5b44bde22ee527d7a64fedf9e90dda26e970cd2cb302df575b38086c3827ab75
+  sha256: 5081ba81878d49a1cc8d400f9695facf6655711b1f0e10a3e695f40c089c30ed
 
 build:
   noarch: python
