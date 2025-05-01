@@ -9,7 +9,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tsml-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/tsml-${{ version }}.tar.gz
   sha256: 5081ba81878d49a1cc8d400f9695facf6655711b1f0e10a3e695f40c089c30ed
 
 build:
