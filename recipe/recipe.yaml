@@ -21,10 +21,10 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - setuptools >=61
-    - wheel
     - toml
     - python-build
     - pip
+    - wheel
   run:
     - python >=${{ python_min }}
     - aeon >=1.0.0
@@ -35,7 +35,7 @@ requirements:
     - scikit-learn >=1.0.0
     - packaging >=20.0
 
-test:
+tests:
   - python:
       imports:
         - tsml
