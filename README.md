@@ -7,9 +7,7 @@ Home: https://github.com/time-series-machine-learning/tsml/
 
 Package license: BSD-3-Clause
 
-Summary: A development sandbox for time series machine learning algorithms.
-
-Development: https://github.com/time-series-machine-learning/
+Summary: A development sandbox for time series machine learning algorithms which dont fit into aeon.
 
 Current build status
 ====================
