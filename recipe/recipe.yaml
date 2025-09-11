@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: tsml
-  version: 0.7.1
+  version: "0.8.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/tsml-${{ version }}.tar.gz
-  sha256: 5081ba81878d49a1cc8d400f9695facf6655711b1f0e10a3e695f40c089c30ed
+  sha256: 0deb10650029a622e166067e42904009a34041ad65876151ddff8e70cdd83afb
 
 build:
   number: 0
