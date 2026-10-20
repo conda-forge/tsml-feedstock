@@ -3,6 +3,7 @@ schema_version: 1
 context:
   name: tsml
   version: "0.10.0"
+  python_min: "3.12"
 
 package:
   name: ${{ name|lower }}
@@ -26,7 +27,7 @@ requirements:
     - pip
     - wheel
   run:
-    - python >=${{ python_min }}
+    - python >=${{ python_min }},<3.15
     - aeon >=1.0.0
     - numba >=0.55.0
     - numpy >=1.21.0
@@ -40,7 +41,9 @@ tests:
       imports:
         - tsml
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: A development sandbox for time series machine learning algorithms which dont fit into aeon.
