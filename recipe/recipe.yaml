@@ -2,7 +2,8 @@ schema_version: 1
 
 context:
   name: tsml
-  version: "0.9.0"
+  version: "0.10.0"
+  python_min: "3.12"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/tsml-${{ version }}.tar.gz
-  sha256: 975279d3ddc3f6840375802108455fcc078e474365707f4433908410cf5f0b89
+  sha256: 011f2d809c13b00ef6bab360f6c617444d5dfaf27239b61b946906da09505f34
 
 build:
   number: 0
@@ -26,7 +27,7 @@ requirements:
     - pip
     - wheel
   run:
-    - python >=${{ python_min }}
+    - python >=${{ python_min }},<3.15
     - aeon >=1.0.0
     - numba >=0.55.0
     - numpy >=1.21.0
@@ -40,7 +41,9 @@ tests:
       imports:
         - tsml
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   summary: A development sandbox for time series machine learning algorithms which dont fit into aeon.
